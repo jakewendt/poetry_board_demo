@@ -1,0 +1,8 @@
+<div class="edit_magnet_div" id="edit_magnet_div_<%=editmagnet.id-%>">
+<input id="magnet_<%=editmagnet.id-%>_word" name="magnet[<%=editmagnet.id-%>][word]" size="30" type="text" value="<%=editmagnet.word-%>" />
+(<%= link_to_remote 'X', 
+  :url => magnet_path(editmagnet), 
+  :confirm => "Delete '#{editmagnet.word}'?\nAre you sure?", 
+  :method => :delete,
+  :html => { :href => "javascript:void(0)" } -%>)
+</div>

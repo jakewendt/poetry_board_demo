@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  board_id: 1
+  word: WordOne
+  top: 1
+  left: 1
+
+two:
+  id: 2
+  board_id: 1
+  word: WordTwo
+  top: 1
+  left: 1

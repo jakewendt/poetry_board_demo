@@ -1,0 +1,5 @@
+<h2>User: <%=h @user.login %></h2>
+<p>email: <%=h @user.email %></p>
+<p>Joined on: <%= @user.created_at.to_s(:long) %></p>
+<p>Last login: <%= if !@user.last_login.blank?; @user.last_login.to_s(:long); end %></p>
+<%= link_to 'Edit', edit_user_path(@user) %>

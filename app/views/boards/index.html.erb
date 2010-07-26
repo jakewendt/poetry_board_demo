@@ -1,0 +1,14 @@
+<p>Boards (<%= link_to 'new', new_board_path %>)</p>
+
+<ul>
+<% for board in @boards %>
+<li>
+(<b><%= link_to 'X', board, :confirm => "Delete '#{board.name}'?\nAre you sure?", :method => :delete %></b>)
+(<%= link_to 'edit', edit_board_path(board) %>)
+<%= link_to h(board.name), board %>
+<%= pluralize( board.magnets_count, 'magnet' ) -%>
+</li>
+<% end %>
+</ul>
+
+<br />

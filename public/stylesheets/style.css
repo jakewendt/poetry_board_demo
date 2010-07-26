@@ -1,0 +1,58 @@
+* {
+	font-family: Verdana;
+}
+body { 
+	margin: 10px; 
+	padding: 0; 
+	font-size: 12pt; 
+	background-color: silver;
+}
+div#container {
+}
+div#content {
+	background-color: white;
+	border: 1px solid gray;
+	margin: 0 auto;
+	width: 80ex;
+  padding-left: 2ex;
+  padding-right: 2ex;
+}
+input { font-size: 20pt; }
+h1 { font-size: 28pt; }
+h2 { font-size: 24pt; }
+h3 { font-size: 20pt; }
+h4 { font-size: 16pt; }
+.magnet {
+	position: absolute;
+	background-color: white;
+	padding: 1ex;
+	border: 1px solid gray;
+	font-size: 20pt; 
+}
+div.edit_magnet_div {
+  text-align: left;
+	padding: 1ex;
+}
+.flash {
+  margin: 0 auto;
+}
+p {
+  text-align: left;
+  padding-left: 1ex;
+}
+div#footer {
+  text-align: center;
+}
+#title {
+  text-align: center;
+}
+.discrete {
+	color: gray;
+	font-size: 10pt;
+}
+ul {
+  list-style: none;
+}
+li {
+  padding-left: 5ex;
+}

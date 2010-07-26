@@ -1,0 +1,1 @@
+page.remove "edit_magnet_div_#{@magnet.id}"

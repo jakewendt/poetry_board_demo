@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<title>Boards: <%= @board.name %></title>
+<%= stylesheet_link_tag 'scaffold' %>
+<%= stylesheet_link_tag 'style' %>
+<%= javascript_include_tag 'jquery.pack.js' %>
+<%= javascript_include_tag 'jquery.dimensions.js' %>
+<%= javascript_include_tag 'ui.mouse.js' %>
+<%= javascript_include_tag 'ui.draggable.js' %>
+<%= javascript_include_tag 'ui.draggable.ext.js' %>
+<script>
+$(function(){
+	$('.magnet').draggable({
+		stop: function() {
+//				$.post("/boards/<%=@board.id-%>/magnets/"+$(this).attr('id')+"/update_position",{
+				$.post("/magnets/"+$(this).attr('id')+"/update_position",{
+					_method:'put',
+					board_id:'<%=@board.id-%>',
+					'magnet[top]':$(this).css('top').replace(/px/,""),
+					'magnet[left]':$(this).css('left').replace(/px/,""),
+					/* Need to check because testing turns forgery protection off */
+					authenticity_token:"<%=if (protect_against_forgery?);form_authenticity_token();end-%>"
+				});
+			}
+	});
+});
+</script>
+</head>
+<body>
+
+<p style="color: red"><%= flash[:error] %></p>
+<p style="color: orange"><%= flash[:warn] %></p>
+<p style="color: green"><%= flash[:notice] %></p>
+
+<%= yield  %>
+
+</body>
+</html>

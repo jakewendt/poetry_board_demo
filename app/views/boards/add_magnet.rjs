@@ -1,0 +1,1 @@
+page.insert_html :top, "magnets", :partial => 'editmagnet', :locals => { :editmagnet => @magnet }

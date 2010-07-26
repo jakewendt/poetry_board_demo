@@ -1,0 +1,1 @@
+page.visual_effect :highlight, "edit_board_#{params[:id]}", :duration => 3

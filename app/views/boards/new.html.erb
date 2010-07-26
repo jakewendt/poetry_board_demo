@@ -1,0 +1,13 @@
+
+<%= error_messages_for :board %>
+
+<% form_for(@board) do |f| %>
+<p>
+<b>Name</b><br />
+<%= f.text_field :name %>
+<%= f.submit "Create" %>
+</p>
+<% end %>
+<script type='text/javascript'>
+document.getElementById('board_name').focus()
+</script>

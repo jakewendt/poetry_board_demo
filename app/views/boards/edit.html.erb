@@ -1,0 +1,24 @@
+
+<%= error_messages_for :board %>
+
+<% remote_form_for(@board) do |f| %>
+<p>Name
+(<%= link_to 'view', @board %>)
+</p>
+<div class='edit_magnet_div'>
+<%= f.text_field :name %>
+<%= f.submit "Update" %>
+</div>
+
+<p>Magnets
+(<%= link_to_remote 'add', 
+	:url => add_magnet_board_path,
+	:method => :put
+%>)
+</p>
+<div id="magnets">
+<%= render :partial => 'editmagnet', :collection => @board.magnets %>
+</div>
+
+<% end %>
+
